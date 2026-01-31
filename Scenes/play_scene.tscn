@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://dna4uxr7ar2pc"]
+
+[ext_resource type="Script" uid="uid://bku7ml2gimec3" path="res://Scripts/OutfitManager.gd" id="1_r3hl1"]
+[ext_resource type="Resource" uid="uid://ckfkpr6u1l5yn" path="res://Sprites/Background/open_background.tres" id="2_1sdb3"]
+[ext_resource type="Texture2D" uid="uid://tvohncgjj8xb" path="res://Sprites/Background/Global_BG31.webp" id="2_lj4ca"]
+[ext_resource type="Texture2D" uid="uid://cdo5xi53rw1a4" path="res://elementos base/2antiparras2.png" id="3_1sdb3"]
+[ext_resource type="Texture2D" uid="uid://doowk3rchlna5" path="res://elementos base/4 orejeras2.png" id="5_pakvq"]
+[ext_resource type="Texture2D" uid="uid://bwmtm3qyq2qpc" path="res://elementos base/1barbijo2.png" id="6_5lpdq"]
+[ext_resource type="Texture2D" uid="uid://dd6iyne56da02" path="res://elementos base/3 gorro2.png" id="7_j1m55"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3hl1")
+success_background = ExtResource("2_1sdb3")
+
+[node name="readyButton" type="Button" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(400, 750)
+layout_mode = 0
+offset_left = 1291.0
+offset_top = 113.0
+offset_right = 1754.0
+offset_bottom = 1083.0
+text = "hola"
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lj4ca")
+
+[node name="CategorySelection" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 880.0
+offset_right = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="EyesTexture" type="TextureButton" parent="CategorySelection"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="EaresTexture" type="TextureButton" parent="CategorySelection"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="NoseMouthTexture" type="TextureButton" parent="CategorySelection"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HatTexture" type="TextureButton" parent="CategorySelection"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CharacterView" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterCointainer" type="Node2D" parent="CharacterView"]
+
+[node name="eyes_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer"]
+texture = ExtResource("3_1sdb3")
+offset = Vector2(960, 540)
+
+[node name="body_base" type="Sprite2D" parent="CharacterView/CharacterCointainer"]
+offset = Vector2(960, 540)
+
+[node name="ears_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer"]
+texture = ExtResource("5_pakvq")
+offset = Vector2(960, 540)
+
+[node name="noseMouth_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer"]
+texture = ExtResource("6_5lpdq")
+offset = Vector2(960, 540)
+
+[node name="hat_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer"]
+texture = ExtResource("7_j1m55")
+offset = Vector2(960, 540)
+
+[connection signal="pressed" from="readyButton" to="." method="_on_ready_button_pressed"]
+[connection signal="pressed" from="CategorySelection/EyesTexture" to="." method="_on_eyes_texture_pressed" binds= ["\"eyes\""]]
+[connection signal="pressed" from="CategorySelection/EaresTexture" to="." method="_on_eares_texture_pressed" binds= ["\"ears\""]]
+[connection signal="pressed" from="CategorySelection/NoseMouthTexture" to="." method="_on_nose_mouth_texture_pressed" binds= ["\"mouth nose\""]]
+[connection signal="pressed" from="CategorySelection/HatTexture" to="." method="_on_hat_texture_pressed" binds= ["\"hat\""]]
