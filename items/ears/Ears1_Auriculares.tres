@@ -1,11 +1,17 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b8wy0hi8ppa7e"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b8wy0hi8ppa7e"]
 
 [ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_5ttuo"]
 [ext_resource type="Texture2D" uid="uid://yw8riecuy4lf" path="res://elementos base/1barbijo2.png" id="2_w3nda"]
+[ext_resource type="Texture2D" uid="uid://cuadbwqos82ii" path="res://Sprites/testItems/black.png" id="3_w3nda"]
 
 [resource]
 script = ExtResource("1_5ttuo")
 name = "auriculares"
-category = "\"ears\""
+category = "ears"
 texture = ExtResource("2_w3nda")
+texture_icon = ExtResource("3_w3nda")
+points_per_disease = {
+"\"VIH\"": 5,
+"\"gripe\"": 8
+}
 metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

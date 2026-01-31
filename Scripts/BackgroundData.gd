@@ -1,5 +1,5 @@
 extends Resource
-class_name Background
+class_name BackgroundData
 
 @export var texture:Texture2D
 @export var name:String

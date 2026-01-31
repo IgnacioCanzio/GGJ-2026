@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Disease" format=3 uid="uid://cqjbum2cjr0o6"]
+
+[ext_resource type="Script" uid="uid://dllq3p807k5g1" path="res://Scripts/Disease.gd" id="1_odraa"]
+
+[resource]
+script = ExtResource("1_odraa")
+name = "gripe"
+description = "blablabla"
+metadata/_custom_type_script = "uid://dllq3p807k5g1"

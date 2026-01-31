@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cjk6e3ca428wj"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_sj36j"]
+[ext_resource type="Texture2D" uid="uid://w38s3xq8q5sw" path="res://icon.svg" id="2_gvjyi"]
+[ext_resource type="Texture2D" uid="uid://b2olvv30tl4qd" path="res://Sprites/testItems/yellow.png" id="3_ntum3"]
+
+[resource]
+script = ExtResource("1_sj36j")
+name = "godot"
+category = "ears"
+texture = ExtResource("2_gvjyi")
+texture_icon = ExtResource("3_ntum3")
+points_per_disease = {
+"\"VIH\"": 13,
+"\"gripe\"": 10
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

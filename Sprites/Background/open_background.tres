@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://ckfkpr6u1l5yn"]
+[gd_resource type="Resource" script_class="BackgroundData" format=3 uid="uid://dwygrcuww5bro"]
 
-[ext_resource type="Script" uid="uid://dyvd8ccrc8rxd" path="res://Background.gd" id="1_ty0fy"]
-[ext_resource type="Texture2D" uid="uid://c8sp1aen5vwlf" path="res://Sprites/Background/Global_BG32.webp" id="2_4lv1q"]
+[ext_resource type="Script" uid="uid://dyvd8ccrc8rxd" path="res://Scripts/BackgroundData.gd" id="1_ty0fy"]
+[ext_resource type="Texture2D" uid="uid://bu8xgbwei3ndu" path="res://Sprites/Background/Global_BG32.webp" id="2_4lv1q"]
 
 [resource]
 script = ExtResource("1_ty0fy")
 texture = ExtResource("2_4lv1q")
+name = "opened"
 metadata/_custom_type_script = "uid://dyvd8ccrc8rxd"
