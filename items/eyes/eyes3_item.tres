@@ -11,8 +11,8 @@ category = "eyes"
 texture = ExtResource("2_xsan8")
 texture_icon = ExtResource("3_7c3d6")
 points_per_disease = {
-"Enfermedad1": 0,
-"Enfermedad2": 0,
-"Enfermedad3": 0
+"Gripe": 2,
+"Paranoia": 1,
+"Photophobia": 1
 }
 metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

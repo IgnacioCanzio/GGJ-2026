@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://mg5tt5ux4qbv" path="res://items/Body.gd" id="1_s1ws7"]
 [ext_resource type="Texture2D" uid="uid://dvf85ir7l3xt" path="res://Scenes/MenuPlayers/human siluette.jpg" id="2_mbuyj"]
-[ext_resource type="Texture2D" uid="uid://k6g542awwe7h" path="res://elementos base/Personaje2.png" id="3_dvb0o"]
+[ext_resource type="Texture2D" uid="uid://b3b8jjod44bdg" path="res://Sprites/Personajes_pantalla_craft/Personajes_pantalla_mascara_1.png" id="3_s1ws7"]
 
 [resource]
 script = ExtResource("1_s1ws7")
 textureIcon = ExtResource("2_mbuyj")
-textureSelection = ExtResource("3_dvb0o")
-name = "matias"
+textureSelection = ExtResource("3_s1ws7")
+name = "1"
 metadata/_custom_type_script = "uid://mg5tt5ux4qbv"

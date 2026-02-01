@@ -11,8 +11,8 @@ category = "mouth nose"
 texture = ExtResource("2_gemf4")
 texture_icon = ExtResource("3_nte1i")
 points_per_disease = {
-"Enfermedad1": 4,
-"Enfermedad2": 2,
-"Enfermedad3": 6
+"Gripe": 1,
+"Paranoia": 1,
+"Photophobia": 5
 }
 metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

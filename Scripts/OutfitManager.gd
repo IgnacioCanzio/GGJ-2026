@@ -22,6 +22,8 @@ extends Node
 @export var sound_success: AudioStreamMP3 
 
 @onready var texture_background = $Background # 
+@onready var disease_overlay = $DiseaseOverlay
+@onready var disease_label = $DiseaseOverlay/DiseasePanel/Label
 
 @export var success_background:BackgroundData # 
 @export var next_scene: PackedScene # 
@@ -50,6 +52,10 @@ var actual_index: Dictionary = {
 } # 
 
 func _ready() -> void:
+	actual_disease = GameManager.get_current_disease()
+	disease_label.text = GameManager.get_current_description()
+	disease_overlay.hide()
+	
 	if background_music and music_player:
 		music_player.volume_db = -15.0
 		music_player.stream = background_music
@@ -140,6 +146,8 @@ func play_sfx(stream: AudioStream):
 func _on_ready_button_pressed():
 	play_sfx(sound_success)
 	var final_result = calculate_total() # 
+	var is_sucess = final_result >= 50
+	GameManager.next_turn(is_sucess)
 	show_result(final_result) # 
 
 # Señales de los botones
@@ -162,3 +170,7 @@ func _on_hat_texture_pressed(extra_arg_0: String) -> void:
 
 func apply_body(body_item: Body):
 	body_base.texture = body_item.textureSelection
+	
+func _on_info_button_pressed():
+	disease_overlay.visible = !disease_overlay.visible
+	play_sfx(sound_click)

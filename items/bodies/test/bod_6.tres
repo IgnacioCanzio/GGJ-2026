@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Body" format=3 uid="uid://cdv1q54ik3oj6"]
+
+[ext_resource type="Script" uid="uid://mg5tt5ux4qbv" path="res://items/Body.gd" id="1_141n2"]
+[ext_resource type="Texture2D" uid="uid://dvf85ir7l3xt" path="res://Scenes/MenuPlayers/human siluette.jpg" id="2_4gu3e"]
+[ext_resource type="Texture2D" uid="uid://by24jbasfxuly" path="res://Sprites/Personajes_pantalla_craft/Personajes_pantalla_mascara_6.png" id="2_5wcby"]
+
+[resource]
+script = ExtResource("1_141n2")
+textureIcon = ExtResource("2_4gu3e")
+textureSelection = ExtResource("2_5wcby")
+name = "6"
+metadata/_custom_type_script = "uid://mg5tt5ux4qbv"

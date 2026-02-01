@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_jnje6")
-name = "VIH"
+name = "Photophobia"
+description = "Marcada sensibilidad a la luz y sonido."
 metadata/_custom_type_script = "uid://dllq3p807k5g1"

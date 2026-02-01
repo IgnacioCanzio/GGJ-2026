@@ -28,6 +28,7 @@
 [ext_resource type="Resource" uid="uid://dlmvvsboggcci" path="res://items/eyes/eyes3_item.tres" id="21_pyjq2"]
 [ext_resource type="Resource" uid="uid://cg3u2wsph1xy8" path="res://items/eyes/eyes4_item.tres" id="22_vttyd"]
 [ext_resource type="Texture2D" uid="uid://cogcjgnjcq1ya" path="res://Sprites/Void/void_200x200.png" id="28_0jq4l"]
+[ext_resource type="Texture2D" uid="uid://w38s3xq8q5sw" path="res://icon.svg" id="29_wn8tk"]
 
 [node name="Node2D" type="Control" unique_id=521618550]
 layout_mode = 3
@@ -82,11 +83,10 @@ offset = Vector2(960, 540)
 z_index = 1
 custom_minimum_size = Vector2(400, 750)
 layout_mode = 0
-offset_left = 1291.0
-offset_top = 113.0
-offset_right = 1754.0
-offset_bottom = 1083.0
-text = "hola"
+offset_left = 1285.0
+offset_top = 120.0
+offset_right = 1757.0
+offset_bottom = 1079.0
 
 [node name="CategorySelection" type="HBoxContainer" parent="." unique_id=1728930981]
 layout_mode = 1
@@ -131,8 +131,55 @@ texture_normal = ExtResource("28_0jq4l")
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1356989504]
 autoplay = true
 
+[node name="DiseaseOverlay" type="Control" parent="." unique_id=654941470]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="DiseaseOverlay" unique_id=995398630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.83137256)
+
+[node name="DiseasePanel" type="NinePatchRect" parent="DiseaseOverlay" unique_id=1835974125]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="DiseaseOverlay/DiseasePanel" unique_id=1789035233]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="InfoButton" type="TextureButton" parent="." unique_id=59205621]
+custom_minimum_size = Vector2(45, 60)
+layout_mode = 0
+offset_left = 910.0
+offset_top = 47.0
+offset_right = 1038.0
+offset_bottom = 178.0
+texture_normal = ExtResource("29_wn8tk")
+
 [connection signal="pressed" from="readyButton" to="." method="_on_ready_button_pressed"]
 [connection signal="pressed" from="CategorySelection/EyesTexture" to="." method="_on_eyes_texture_pressed" binds= ["\"eyes\""]]
 [connection signal="pressed" from="CategorySelection/EaresTexture" to="." method="_on_eares_texture_pressed" binds= ["ears"]]
 [connection signal="pressed" from="CategorySelection/NoseMouthTexture" to="." method="_on_nose_mouth_texture_pressed" binds= ["\"mouth nose\""]]
 [connection signal="pressed" from="CategorySelection/HatTexture" to="." method="_on_hat_texture_pressed" binds= ["\"hat\""]]
+[connection signal="pressed" from="InfoButton" to="." method="_on_info_button_pressed"]

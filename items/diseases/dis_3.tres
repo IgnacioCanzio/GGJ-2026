@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Disease" format=3 uid="uid://jloyifcwpcwh"]
+
+[ext_resource type="Script" uid="uid://dllq3p807k5g1" path="res://Scripts/Disease.gd" id="1_6jrnk"]
+
+[resource]
+script = ExtResource("1_6jrnk")
+name = "Paranoia"
+description = "Interfiere con las señales cerebrales y se ve repelido por el cuero."
+metadata/_custom_type_script = "uid://dllq3p807k5g1"

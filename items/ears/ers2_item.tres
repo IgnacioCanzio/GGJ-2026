@@ -11,7 +11,8 @@ category = "ears"
 texture = ExtResource("2_1stb8")
 texture_icon = ExtResource("3_fwp48")
 points_per_disease = {
-"\"VIH\"": 5,
-"\"gripe\"": 8
+"Gripe": 2,
+"Paranoia": 1,
+"Photophobia": 2
 }
 metadata/_custom_type_script = "uid://cro0yyo5pyyx8"
