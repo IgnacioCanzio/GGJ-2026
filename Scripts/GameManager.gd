@@ -21,9 +21,12 @@ func load_bodies_from_folder(path: String):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if not dir.current_is_dir() and not file_name.ends_with(".import"):
-				if file_name.ends_with(".tres") or file_name.ends_with(".res"):
-					var body_res = load(path + file_name)
+			if not dir.current_is_dir():
+				# Al exportar, los archivos pueden terminar en .tres.remap
+				if file_name.ends_with(".tres") or file_name.ends_with(".res") or file_name.get_extension() == "remap":
+					# Limpiamos el ".remap" para que load() encuentre el recurso real
+					var clean_path = path + file_name.replace(".remap", "")
+					var body_res = load(clean_path)
 					if body_res is Body:
 						available_bodies.append(body_res)
 			file_name = dir.get_next()

@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_b262s"]
 [ext_resource type="Texture2D" uid="uid://dnhabc25k4iia" path="res://Sprites/Void/void_1080p.png" id="2_lynkw"]
-[ext_resource type="Texture2D" uid="uid://cogcjgnjcq1ya" path="res://Sprites/Void/void_200x200.png" id="3_dvf01"]
+[ext_resource type="Texture2D" uid="uid://dplihnpg7bwpn" path="res://Sprites/testItems/green.png" id="3_lynkw"]
 
 [resource]
 script = ExtResource("1_b262s")
 name = "void"
 category = "eyes"
 texture = ExtResource("2_lynkw")
-texture_icon = ExtResource("3_dvf01")
+texture_icon = ExtResource("3_lynkw")
 points_per_disease = {
 "Enfermedad1": 0,
 "Enfermedad2": 0,
