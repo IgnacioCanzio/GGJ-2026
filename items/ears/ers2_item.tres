@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dnn2raakmvqbm"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_1stb8"]
+[ext_resource type="Texture2D" uid="uid://dwex0gbqh4dp3" path="res://Sprites/PartesMascara/4_Orejas/4_vasos1.png" id="2_1stb8"]
+[ext_resource type="Texture2D" uid="uid://dvhon636gk5wy" path="res://Sprites/BotonesPartesMascara/4_Orejas/Boton_vasos.png" id="3_fwp48"]
+
+[resource]
+script = ExtResource("1_1stb8")
+name = "vasos"
+category = "ears"
+texture = ExtResource("2_1stb8")
+texture_icon = ExtResource("3_fwp48")
+points_per_disease = {
+"\"VIH\"": 5,
+"\"gripe\"": 8
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

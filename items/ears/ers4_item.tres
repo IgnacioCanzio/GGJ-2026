@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://kmptp1vp8r0o"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_lu7oy"]
+[ext_resource type="Texture2D" uid="uid://dc7xaor1ojs7g" path="res://Sprites/PartesMascara/4_Orejas/3_orejeras1.png" id="2_lu7oy"]
+[ext_resource type="Texture2D" uid="uid://bj7a2x8nhtpi0" path="res://Sprites/BotonesPartesMascara/4_Orejas/Boton_orejeras.png" id="3_npn8v"]
+
+[resource]
+script = ExtResource("1_lu7oy")
+name = "orejeras"
+category = "ears"
+texture = ExtResource("2_lu7oy")
+texture_icon = ExtResource("3_npn8v")
+points_per_disease = {
+"\"VIH\"": 5,
+"\"gripe\"": 8
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

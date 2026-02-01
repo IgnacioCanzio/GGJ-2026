@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b8wy0hi8ppa7e"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_djoyv"]
+[ext_resource type="Texture2D" uid="uid://c4ckyukvrj25r" path="res://Sprites/PartesMascara/4_Orejas/1_auriculares1.png" id="2_djoyv"]
+[ext_resource type="Texture2D" uid="uid://ba0ichi8d1tdx" path="res://Sprites/BotonesPartesMascara/4_Orejas/Boton_auriculares.png" id="3_vi6p5"]
+
+[resource]
+script = ExtResource("1_djoyv")
+name = "auriculares"
+category = "ears"
+texture = ExtResource("2_djoyv")
+texture_icon = ExtResource("3_vi6p5")
+points_per_disease = {
+"\"VIH\"": 5,
+"\"gripe\"": 8
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

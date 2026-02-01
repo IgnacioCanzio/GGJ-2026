@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://by1okqmv6mgcg"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_apjnt"]
+[ext_resource type="Texture2D" uid="uid://bb4hl0al8ofbx" path="res://Sprites/PartesMascara/1_Nariz_boca/1_mascara_aerosol1.png" id="2_58xjw"]
+[ext_resource type="Texture2D" uid="uid://dekowefdsdjqp" path="res://Sprites/BotonesPartesMascara/1_Nariz_Boca/Boton_mascara_aerosol.png" id="3_l10nl"]
+
+[resource]
+script = ExtResource("1_apjnt")
+name = "aerosol"
+category = "mouth nose"
+texture = ExtResource("2_58xjw")
+texture_icon = ExtResource("3_l10nl")
+points_per_disease = {
+"Enfermedad1": 4,
+"Enfermedad2": 8,
+"Enfermedad3": 5
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

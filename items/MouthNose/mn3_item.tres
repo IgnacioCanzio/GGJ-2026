@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://kqfyg4cfvrtj"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_yteq1"]
+[ext_resource type="Texture2D" uid="uid://dvkb6i865b4up" path="res://Sprites/PartesMascara/1_Nariz_boca/4_Barbijo_avion1.png" id="2_uyc2d"]
+[ext_resource type="Texture2D" uid="uid://bt6h67kqa614c" path="res://Sprites/BotonesPartesMascara/1_Nariz_Boca/Boton_barbijo_avion.png" id="3_qqsh8"]
+
+[resource]
+script = ExtResource("1_yteq1")
+name = "barbijo"
+category = "mouth nose"
+texture = ExtResource("2_uyc2d")
+texture_icon = ExtResource("3_qqsh8")
+points_per_disease = {
+"Enfermedad1": 1,
+"Enfermedad2": 1,
+"Enfermedad3": 4
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

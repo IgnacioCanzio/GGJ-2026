@@ -3,11 +3,20 @@ extends Control
 @export var gameplay_scene: PackedScene # 
 @onready var grid: GridContainer = $MainLayout/SelectionGrid
 @onready var confirm_button: Button = $MainLayout/ConfirmButton
+@onready var music_player = $MusicPlayer
+@onready var sfx_player = $SfxPlayer
+
+@export var sound_click: AudioStreamMP3
+@export var background_music: AudioStreamWAV
 
 var temp_selection: Body = null # 
 
 func _ready():
-	# Configuración de diseño por código para asegurar que ocupe espacio
+	if background_music and music_player:
+		music_player.volume_db = -15.0
+		music_player.stream = background_music
+		music_player.play()
+	
 	anchor_right = 1.0
 	anchor_bottom = 1.0
 	
@@ -43,6 +52,7 @@ func setup_selection_grid():
 		grid.add_child(btn)
 
 func _on_body_preselected(body: Body, selected_btn: TextureButton):
+	play_sfx()
 	temp_selection = body # 
 	confirm_button.disabled = false # 
 	confirm_button.text = "Confirmar selección de: " + body.name
@@ -59,5 +69,13 @@ func _on_body_preselected(body: Body, selected_btn: TextureButton):
 
 func _on_confirm_pressed():
 	if temp_selection:
-		GameManager.select_and_remove_body(temp_selection) # Lo quita de la lista global
+		play_sfx()
+		await get_tree().create_timer(0.1).timeout 
+		GameManager.select_and_remove_body(temp_selection)
 		get_tree().change_scene_to_packed(gameplay_scene)
+
+func play_sfx():
+	if sfx_player and sound_click:
+		sfx_player.stream = sound_click
+		sfx_player.pitch_scale = randf_range(0.9, 1.1) 
+		sfx_player.play()

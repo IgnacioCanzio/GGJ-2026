@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b1llkio2hu5fu"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_7wbfv"]
+[ext_resource type="Texture2D" uid="uid://da0054gdutsgu" path="res://Sprites/PartesMascara/4_Orejas/2_caracoles1.png" id="2_7wbfv"]
+[ext_resource type="Texture2D" uid="uid://rfht6g6bsxfs" path="res://Sprites/BotonesPartesMascara/4_Orejas/Boton_caracoles.png" id="3_vkhu6"]
+
+[resource]
+script = ExtResource("1_7wbfv")
+name = "caracoles"
+category = "ears"
+texture = ExtResource("2_7wbfv")
+texture_icon = ExtResource("3_vkhu6")
+points_per_disease = {
+"\"VIH\"": 5,
+"\"gripe\"": 8
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

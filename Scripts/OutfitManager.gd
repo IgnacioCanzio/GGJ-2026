@@ -12,7 +12,14 @@ extends Node
 @onready var sprite_ears = $CharacterView/CharacterCointainer/ears_slot # 
 @onready var sprite_nose_mouth = $CharacterView/CharacterCointainer/noseMouth_slot # 
 @onready var sprite_hat = $CharacterView/CharacterCointainer/hat_slot # 
-@onready var body_base = $CharacterView/CharacterCointainer/body_base # 
+@onready var body_base = $CharacterView/CharacterCointainer/body_base #
+
+@onready var sfx_player = $SfxPlayer
+@onready var music_player = $MusicPlayer
+
+@export var background_music: AudioStreamWAV
+@export var sound_click: AudioStreamMP3
+@export var sound_success: AudioStreamMP3 
 
 @onready var texture_background = $Background # 
 
@@ -43,6 +50,11 @@ var actual_index: Dictionary = {
 } # 
 
 func _ready() -> void:
+	if background_music and music_player:
+		music_player.volume_db = -15.0
+		music_player.stream = background_music
+		music_player.play()
+	
 	if GameManager.selected_body:
 		apply_body(GameManager.selected_body)
 	elif selected_body:
@@ -120,22 +132,32 @@ func show_result(value: int):
 		else:
 			print("Error: No has asignado escena siguiente.") # 
 
+func play_sfx(stream: AudioStream):
+	if sfx_player and stream:
+		sfx_player.stream = stream
+		sfx_player.play()
+
 func _on_ready_button_pressed():
+	play_sfx(sound_success)
 	var final_result = calculate_total() # 
 	show_result(final_result) # 
 
 # Señales de los botones
 func _on_eares_texture_pressed(extra_arg_0: String) -> void:
 	print("Señal presionada: ears")
+	play_sfx(sound_click)
 	rotate_item(extra_arg_0) # [cite: 2, 5]
 
 func _on_eyes_texture_pressed(extra_arg_0: String) -> void:
+	play_sfx(sound_click)
 	rotate_item(extra_arg_0) # 
 
 func _on_nose_mouth_texture_pressed(extra_arg_0: String) -> void:
+	play_sfx(sound_click)
 	rotate_item(extra_arg_0) # 
 
 func _on_hat_texture_pressed(extra_arg_0: String) -> void:
+	play_sfx(sound_click)
 	rotate_item(extra_arg_0) # 
 
 func apply_body(body_item: Body):

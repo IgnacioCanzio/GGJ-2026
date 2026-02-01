@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cg3u2wsph1xy8"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_eicoo"]
+[ext_resource type="Texture2D" uid="uid://cyb4jaf0xcfp5" path="res://Sprites/PartesMascara/2_Ojos/3_lentes_aviador1.png" id="2_4v802"]
+[ext_resource type="Texture2D" uid="uid://dhv8ebbiiq3kw" path="res://Sprites/BotonesPartesMascara/2_Ojos/Boton_lentes_aviador.png" id="3_eosse"]
+
+[resource]
+script = ExtResource("1_eicoo")
+name = "aviador"
+category = "eyes"
+texture = ExtResource("2_4v802")
+texture_icon = ExtResource("3_eosse")
+points_per_disease = {
+"Enfermedad1": 0,
+"Enfermedad2": 0,
+"Enfermedad3": 0
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

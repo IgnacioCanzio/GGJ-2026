@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c0888wuwfbxid"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_nojke"]
+[ext_resource type="Texture2D" uid="uid://dnhabc25k4iia" path="res://Sprites/Void/void_1080p.png" id="2_gg6rs"]
+[ext_resource type="Texture2D" uid="uid://cogcjgnjcq1ya" path="res://Sprites/Void/void_200x200.png" id="3_qhcpe"]
+
+[resource]
+script = ExtResource("1_nojke")
+name = "void"
+category = "ears"
+texture = ExtResource("2_gg6rs")
+texture_icon = ExtResource("3_qhcpe")
+points_per_disease = {
+"\"VIH\"": 5,
+"\"gripe\"": 8
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://hxlxv4sg24mt"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_o1i4k"]
+[ext_resource type="Texture2D" uid="uid://cl8ra5xt8pnp8" path="res://Sprites/PartesMascara/3_Cabeza/1_aluminio1.png" id="2_6fskh"]
+[ext_resource type="Texture2D" uid="uid://bk2ohg5x6amny" path="res://Sprites/BotonesPartesMascara/3_Cabeza/Boton_gorro_aluminio.png" id="3_lb1vg"]
+
+[resource]
+script = ExtResource("1_o1i4k")
+name = "aluminio"
+category = "hat"
+texture = ExtResource("2_6fskh")
+texture_icon = ExtResource("3_lb1vg")
+points_per_disease = {
+"Enfermedad1": 1,
+"Enfermedad2": 1,
+"Enfermedad3": 1
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

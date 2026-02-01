@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dlmvvsboggcci"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_1d8yy"]
+[ext_resource type="Texture2D" uid="uid://fgfevk6sst74" path="res://Sprites/PartesMascara/2_Ojos/4_VR1.png" id="2_xsan8"]
+[ext_resource type="Texture2D" uid="uid://bmx7glaqyr787" path="res://Sprites/BotonesPartesMascara/2_Ojos/Boton_VR.png" id="3_7c3d6"]
+
+[resource]
+script = ExtResource("1_1d8yy")
+name = "vr"
+category = "eyes"
+texture = ExtResource("2_xsan8")
+texture_icon = ExtResource("3_7c3d6")
+points_per_disease = {
+"Enfermedad1": 0,
+"Enfermedad2": 0,
+"Enfermedad3": 0
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

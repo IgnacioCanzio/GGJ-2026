@@ -4,13 +4,30 @@
 [ext_resource type="Resource" uid="uid://dwygrcuww5bro" path="res://Sprites/Background/open_background.tres" id="2_1sdb3"]
 [ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="2_ivbpn"]
 [ext_resource type="Texture2D" uid="uid://bwo77bxsl2xmr" path="res://Sprites/Background/Global_BG31.webp" id="2_lj4ca"]
-[ext_resource type="Resource" uid="uid://b8wy0hi8ppa7e" path="res://items/ears/Ears1_Auriculares.tres" id="3_io55t"]
-[ext_resource type="Resource" uid="uid://c4qnk3xam87rt" path="res://items/ears/Ears3_void.tres" id="3_knw1p"]
-[ext_resource type="Resource" uid="uid://cjk6e3ca428wj" path="res://items/ears/Ears2_test.tres" id="4_45wvb"]
-[ext_resource type="Texture2D" uid="uid://cuadbwqos82ii" path="res://Sprites/testItems/black.png" id="12_j3qlu"]
-[ext_resource type="Texture2D" uid="uid://dplihnpg7bwpn" path="res://Sprites/testItems/green.png" id="13_fbpj1"]
-[ext_resource type="Texture2D" uid="uid://dne7a33qp1nei" path="res://Sprites/testItems/red.png" id="14_3cjv5"]
-[ext_resource type="Texture2D" uid="uid://b2olvv30tl4qd" path="res://Sprites/testItems/yellow.png" id="15_2kn3l"]
+[ext_resource type="Resource" uid="uid://d0lmsuf2s0a0m" path="res://items/MouthNose/mn0_item.tres" id="3_fbpj1"]
+[ext_resource type="Resource" uid="uid://by1okqmv6mgcg" path="res://items/MouthNose/mn1_item.tres" id="3_j3qlu"]
+[ext_resource type="Resource" uid="uid://dnceij223v2ut" path="res://items/MouthNose/mn2_item.tres" id="4_fbpj1"]
+[ext_resource type="Resource" uid="uid://kqfyg4cfvrtj" path="res://items/MouthNose/mn3_item.tres" id="5_3cjv5"]
+[ext_resource type="Resource" uid="uid://dwwbjvlpg0kf6" path="res://items/MouthNose/mn4_item.tres" id="6_2kn3l"]
+[ext_resource type="AudioStream" uid="uid://3j1fjppuaj23" path="res://Sounds/Lab.wav" id="6_45wvb"]
+[ext_resource type="AudioStream" uid="uid://brutd0ll7i3j2" path="res://Sounds/seleccionar.mp3" id="6_io55t"]
+[ext_resource type="AudioStream" uid="uid://c70lsb5cr5bwh" path="res://Sounds/Puerta.mp3" id="7_45wvb"]
+[ext_resource type="Resource" uid="uid://c0888wuwfbxid" path="res://items/ears/ers0_item.tres" id="8_lneu0"]
+[ext_resource type="Resource" uid="uid://b8wy0hi8ppa7e" path="res://items/ears/ers1_item.tres" id="9_3wskg"]
+[ext_resource type="Resource" uid="uid://dnn2raakmvqbm" path="res://items/ears/ers2_item.tres" id="10_s0476"]
+[ext_resource type="Resource" uid="uid://b1llkio2hu5fu" path="res://items/ears/ers3_item.tres" id="11_1mfr0"]
+[ext_resource type="Resource" uid="uid://kmptp1vp8r0o" path="res://items/ears/ers4_item.tres" id="12_cqpud"]
+[ext_resource type="Resource" uid="uid://c0emma835cohu" path="res://items/hat/ht0_item.tres" id="13_xmy8f"]
+[ext_resource type="Resource" uid="uid://hxlxv4sg24mt" path="res://items/hat/ht1_item.tres" id="14_10s6a"]
+[ext_resource type="Resource" uid="uid://dcej8lkyfqgnl" path="res://items/hat/ht2_item.tres" id="15_0jq4l"]
+[ext_resource type="Resource" uid="uid://clgw738m8bte8" path="res://items/hat/ht3_item.tres" id="16_wn8tk"]
+[ext_resource type="Resource" uid="uid://dmm67olngsgll" path="res://items/hat/ht4_item.tres" id="17_wuoun"]
+[ext_resource type="Resource" uid="uid://d3ely8406pbt4" path="res://items/eyes/eyes0_item.tres" id="18_ipi3v"]
+[ext_resource type="Resource" uid="uid://dapbxn1mixuqf" path="res://items/eyes/eyes1_item.tres" id="19_ge4dx"]
+[ext_resource type="Resource" uid="uid://5e5haphx3rvc" path="res://items/eyes/eyes2_item.tres" id="20_ehfk6"]
+[ext_resource type="Resource" uid="uid://dlmvvsboggcci" path="res://items/eyes/eyes3_item.tres" id="21_pyjq2"]
+[ext_resource type="Resource" uid="uid://cg3u2wsph1xy8" path="res://items/eyes/eyes4_item.tres" id="22_vttyd"]
+[ext_resource type="Texture2D" uid="uid://cogcjgnjcq1ya" path="res://Sprites/Void/void_200x200.png" id="28_0jq4l"]
 
 [node name="Node2D" type="Control" unique_id=521618550]
 layout_mode = 3
@@ -20,7 +37,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r3hl1")
-item_list = Array[ExtResource("2_ivbpn")]([ExtResource("3_knw1p"), ExtResource("3_io55t"), ExtResource("4_45wvb")])
+item_list = Array[ExtResource("2_ivbpn")]([ExtResource("3_fbpj1"), ExtResource("3_j3qlu"), ExtResource("4_fbpj1"), ExtResource("5_3cjv5"), ExtResource("6_2kn3l"), ExtResource("8_lneu0"), ExtResource("9_3wskg"), ExtResource("10_s0476"), ExtResource("11_1mfr0"), ExtResource("12_cqpud"), ExtResource("13_xmy8f"), ExtResource("14_10s6a"), ExtResource("15_0jq4l"), ExtResource("16_wn8tk"), ExtResource("17_wuoun"), ExtResource("18_ipi3v"), ExtResource("19_ge4dx"), ExtResource("20_ehfk6"), ExtResource("21_pyjq2"), ExtResource("22_vttyd")])
+background_music = ExtResource("6_45wvb")
+sound_click = ExtResource("6_io55t")
+sound_success = ExtResource("7_45wvb")
 success_background = ExtResource("2_1sdb3")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1739497138]
@@ -43,19 +63,19 @@ mouse_filter = 2
 
 [node name="CharacterCointainer" type="Node2D" parent="CharacterView" unique_id=111226957]
 
-[node name="eyes_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1188191094]
-offset = Vector2(960, 540)
-
 [node name="body_base" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=484898054]
 offset = Vector2(960, 540)
 
 [node name="ears_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=450444154]
 offset = Vector2(960, 540)
 
+[node name="hat_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1642930039]
+offset = Vector2(960, 540)
+
 [node name="noseMouth_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1249678197]
 offset = Vector2(960, 540)
 
-[node name="hat_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1642930039]
+[node name="eyes_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1188191094]
 offset = Vector2(960, 540)
 
 [node name="readyButton" type="Button" parent="." unique_id=2147397937]
@@ -86,25 +106,30 @@ alignment = 1
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("12_j3qlu")
+texture_normal = ExtResource("28_0jq4l")
 
 [node name="EaresTexture" type="TextureButton" parent="CategorySelection" unique_id=1529208585]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("13_fbpj1")
+texture_normal = ExtResource("28_0jq4l")
 
 [node name="NoseMouthTexture" type="TextureButton" parent="CategorySelection" unique_id=1096730630]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("14_3cjv5")
+texture_normal = ExtResource("28_0jq4l")
 
 [node name="HatTexture" type="TextureButton" parent="CategorySelection" unique_id=92703686]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("15_2kn3l")
+texture_normal = ExtResource("28_0jq4l")
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1686231690]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1356989504]
+autoplay = true
 
 [connection signal="pressed" from="readyButton" to="." method="_on_ready_button_pressed"]
 [connection signal="pressed" from="CategorySelection/EyesTexture" to="." method="_on_eyes_texture_pressed" binds= ["\"eyes\""]]

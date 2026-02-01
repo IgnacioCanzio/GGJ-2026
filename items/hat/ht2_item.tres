@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dcej8lkyfqgnl"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_c4d2q"]
+[ext_resource type="Texture2D" uid="uid://s1o6najhp8xp" path="res://Sprites/PartesMascara/3_Cabeza/3_gorro_lana1.png" id="2_gkrai"]
+[ext_resource type="Texture2D" uid="uid://xfx4mt7pnwil" path="res://Sprites/BotonesPartesMascara/3_Cabeza/Boton_Gorro_lana.png" id="3_ds6no"]
+
+[resource]
+script = ExtResource("1_c4d2q")
+name = "lana"
+category = "hat"
+texture = ExtResource("2_gkrai")
+texture_icon = ExtResource("3_ds6no")
+points_per_disease = {
+"Enfermedad1": 1,
+"Enfermedad2": 1,
+"Enfermedad3": 1
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

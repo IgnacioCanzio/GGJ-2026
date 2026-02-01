@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dwwbjvlpg0kf6"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_1x8ur"]
+[ext_resource type="Texture2D" uid="uid://c0ssnos1xd41a" path="res://Sprites/PartesMascara/1_Nariz_boca/2_mascara_doctor_medieval1.png" id="2_x3ljs"]
+[ext_resource type="Texture2D" uid="uid://bio850exfxkig" path="res://Sprites/BotonesPartesMascara/1_Nariz_Boca/Boton_mascara_doctor_medieval.png" id="3_7s0es"]
+
+[resource]
+script = ExtResource("1_1x8ur")
+name = "doctor_med"
+category = "mouth nose"
+texture = ExtResource("2_x3ljs")
+texture_icon = ExtResource("3_7s0es")
+points_per_disease = {
+"Enfermedad1": 3,
+"Enfermedad2": 1,
+"Enfermedad3": 1
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

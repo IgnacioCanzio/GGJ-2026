@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dapbxn1mixuqf"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_w7gf6"]
+[ext_resource type="Texture2D" uid="uid://bd1a0s274wxnx" path="res://Sprites/PartesMascara/2_Ojos/2_antiparras_dormir1.png" id="2_shcqk"]
+[ext_resource type="Texture2D" uid="uid://dbxephuoi5uye" path="res://Sprites/BotonesPartesMascara/2_Ojos/Boton_antiparra_dormir.png" id="3_qefyk"]
+
+[resource]
+script = ExtResource("1_w7gf6")
+name = "dormir"
+category = "eyes"
+texture = ExtResource("2_shcqk")
+texture_icon = ExtResource("3_qefyk")
+points_per_disease = {
+"Enfermedad1": 0,
+"Enfermedad2": 0,
+"Enfermedad3": 0
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

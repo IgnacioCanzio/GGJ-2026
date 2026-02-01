@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c0emma835cohu"]
+
+[ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="1_u0npj"]
+[ext_resource type="Texture2D" uid="uid://dnhabc25k4iia" path="res://Sprites/Void/void_1080p.png" id="2_rr2ym"]
+[ext_resource type="Texture2D" uid="uid://cogcjgnjcq1ya" path="res://Sprites/Void/void_200x200.png" id="3_bl4tb"]
+
+[resource]
+script = ExtResource("1_u0npj")
+name = "void"
+category = "hat"
+texture = ExtResource("2_rr2ym")
+texture_icon = ExtResource("3_bl4tb")
+points_per_disease = {
+"Enfermedad1": 1,
+"Enfermedad2": 1,
+"Enfermedad3": 1
+}
+metadata/_custom_type_script = "uid://cro0yyo5pyyx8"

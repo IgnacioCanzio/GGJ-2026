@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://p4gbn76ybk5m" path="res://Scripts/character_selection.gd" id="1_ejqe8"]
 [ext_resource type="PackedScene" uid="uid://dna4uxr7ar2pc" path="res://Scenes/play_scene.tscn" id="2_0d6bl"]
+[ext_resource type="AudioStream" uid="uid://kpccasbl7t55" path="res://Sounds/Main Menu-Intro.wav" id="3_h7vfx"]
+[ext_resource type="AudioStream" uid="uid://brutd0ll7i3j2" path="res://Sounds/seleccionar.mp3" id="3_sv6u6"]
 
 [node name="CharacterSelection" type="Control" unique_id=892060466]
 layout_mode = 3
@@ -12,6 +14,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ejqe8")
 gameplay_scene = ExtResource("2_0d6bl")
+sound_click = ExtResource("3_sv6u6")
+background_music = ExtResource("3_h7vfx")
 
 [node name="MainLayout" type="VBoxContainer" parent="." unique_id=255785175]
 layout_mode = 1
@@ -32,3 +36,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 disabled = true
 text = "CONFIRM SELECTION"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=543910338]
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=742590215]
