@@ -43,8 +43,10 @@ var actual_index: Dictionary = {
 } # 
 
 func _ready() -> void:
-	if selected_body:
-		apply_body(selected_body) # 
+	if GameManager.selected_body:
+		apply_body(GameManager.selected_body)
+	elif selected_body:
+		apply_body(selected_body)
 	
 	if item_list.is_empty():
 		print("ADVERTENCIA: La lista de items (item_list) está vacía en el Inspector.")
@@ -137,4 +139,4 @@ func _on_hat_texture_pressed(extra_arg_0: String) -> void:
 	rotate_item(extra_arg_0) # 
 
 func apply_body(body_item: Body):
-	body_base.texture = body_item.texture #
+	body_base.texture = body_item.textureSelection

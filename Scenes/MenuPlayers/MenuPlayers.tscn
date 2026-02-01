@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bbkdj5hun300v"]
 
-[ext_resource type="Texture2D" uid="uid://5o5wysx7b2nc" path="res://human siluette.jpg" id="1_m614f"]
-[ext_resource type="Texture2D" uid="uid://d1i2y3bovlvhx" path="res://human siluette - copia.jpg" id="2_w5gth"]
+[ext_resource type="Texture2D" uid="uid://dvf85ir7l3xt" path="res://Scenes/MenuPlayers/human siluette.jpg" id="1_8td7k"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_m614f"]
 
@@ -24,7 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1476129772]
 layout_mode = 1
@@ -34,7 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
-metadata/_edit_use_anchors_ = true
+alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="Panel/HBoxContainer" unique_id=70147185]
 custom_minimum_size = Vector2(106, 5)
@@ -42,7 +40,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -52,7 +50,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -62,7 +60,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -72,7 +70,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -83,7 +81,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -93,7 +91,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -103,7 +101,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -111,9 +109,7 @@ stretch_mode = 6
 custom_minimum_size = Vector2(106, 0)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("1_m614f")
-texture_pressed = ExtResource("2_w5gth")
-texture_hover = ExtResource("2_w5gth")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -123,7 +119,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -133,6 +129,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 toggle_mode = true
 button_group = SubResource("ButtonGroup_m614f")
-texture_normal = ExtResource("1_m614f")
+texture_normal = ExtResource("1_8td7k")
 ignore_texture_size = true
 stretch_mode = 6

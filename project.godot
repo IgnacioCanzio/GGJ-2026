@@ -18,6 +18,10 @@ config/name="GGJM-2026"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*uid://cnmv5tmihy202"
+
 [display]
 
 window/size/viewport_width=1920

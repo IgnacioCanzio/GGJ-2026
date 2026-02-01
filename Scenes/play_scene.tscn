@@ -4,13 +4,9 @@
 [ext_resource type="Resource" uid="uid://dwygrcuww5bro" path="res://Sprites/Background/open_background.tres" id="2_1sdb3"]
 [ext_resource type="Script" uid="uid://cro0yyo5pyyx8" path="res://Scripts/Item.gd" id="2_ivbpn"]
 [ext_resource type="Texture2D" uid="uid://bwo77bxsl2xmr" path="res://Sprites/Background/Global_BG31.webp" id="2_lj4ca"]
-[ext_resource type="Texture2D" uid="uid://dqvkhy5c5ft60" path="res://elementos base/2antiparras2.png" id="3_1sdb3"]
 [ext_resource type="Resource" uid="uid://b8wy0hi8ppa7e" path="res://items/ears/Ears1_Auriculares.tres" id="3_io55t"]
+[ext_resource type="Resource" uid="uid://c4qnk3xam87rt" path="res://items/ears/Ears3_void.tres" id="3_knw1p"]
 [ext_resource type="Resource" uid="uid://cjk6e3ca428wj" path="res://items/ears/Ears2_test.tres" id="4_45wvb"]
-[ext_resource type="Texture2D" uid="uid://k6g542awwe7h" path="res://elementos base/Personaje2.png" id="5_5lpdq"]
-[ext_resource type="Texture2D" uid="uid://denad5wnaf71y" path="res://elementos base/4 orejeras2.png" id="5_pakvq"]
-[ext_resource type="Texture2D" uid="uid://yw8riecuy4lf" path="res://elementos base/1barbijo2.png" id="6_5lpdq"]
-[ext_resource type="Texture2D" uid="uid://3rpv1rh46g8e" path="res://elementos base/3 gorro2.png" id="7_j1m55"]
 [ext_resource type="Texture2D" uid="uid://cuadbwqos82ii" path="res://Sprites/testItems/black.png" id="12_j3qlu"]
 [ext_resource type="Texture2D" uid="uid://dplihnpg7bwpn" path="res://Sprites/testItems/green.png" id="13_fbpj1"]
 [ext_resource type="Texture2D" uid="uid://dne7a33qp1nei" path="res://Sprites/testItems/red.png" id="14_3cjv5"]
@@ -24,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r3hl1")
-item_list = Array[ExtResource("2_ivbpn")]([ExtResource("3_io55t"), ExtResource("4_45wvb")])
+item_list = Array[ExtResource("2_ivbpn")]([ExtResource("3_knw1p"), ExtResource("3_io55t"), ExtResource("4_45wvb")])
 success_background = ExtResource("2_1sdb3")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1739497138]
@@ -48,23 +44,18 @@ mouse_filter = 2
 [node name="CharacterCointainer" type="Node2D" parent="CharacterView" unique_id=111226957]
 
 [node name="eyes_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1188191094]
-texture = ExtResource("3_1sdb3")
 offset = Vector2(960, 540)
 
 [node name="body_base" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=484898054]
-texture = ExtResource("5_5lpdq")
 offset = Vector2(960, 540)
 
 [node name="ears_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=450444154]
-texture = ExtResource("5_pakvq")
 offset = Vector2(960, 540)
 
 [node name="noseMouth_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1249678197]
-texture = ExtResource("6_5lpdq")
 offset = Vector2(960, 540)
 
 [node name="hat_slot" type="Sprite2D" parent="CharacterView/CharacterCointainer" unique_id=1642930039]
-texture = ExtResource("7_j1m55")
 offset = Vector2(960, 540)
 
 [node name="readyButton" type="Button" parent="." unique_id=2147397937]

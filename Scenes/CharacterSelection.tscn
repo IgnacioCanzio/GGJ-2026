@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dlxueu3w0a8au"]
+
+[ext_resource type="Script" uid="uid://p4gbn76ybk5m" path="res://Scripts/character_selection.gd" id="1_ejqe8"]
+[ext_resource type="PackedScene" uid="uid://dna4uxr7ar2pc" path="res://Scenes/play_scene.tscn" id="2_0d6bl"]
+
+[node name="CharacterSelection" type="Control" unique_id=892060466]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ejqe8")
+gameplay_scene = ExtResource("2_0d6bl")
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=255785175]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectionGrid" type="GridContainer" parent="MainLayout" unique_id=904629910]
+layout_mode = 2
+columns = 5
+
+[node name="ConfirmButton" type="Button" parent="MainLayout" unique_id=795113143]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+disabled = true
+text = "CONFIRM SELECTION"
