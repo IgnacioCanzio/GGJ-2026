@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dqpj6pk66n5si"]
+
+[ext_resource type="Texture2D" uid="uid://dabyfa6me7hi1" path="res://Sprites/Pantalla_incial.png" id="1_d30j0"]
+
+[node name="IntroScene" type="Control" unique_id=761648763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2090035920]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d30j0")

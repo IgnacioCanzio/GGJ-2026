@@ -24,6 +24,7 @@ extends Node
 @onready var texture_background = $Background # 
 @onready var disease_overlay = $DiseaseOverlay
 @onready var disease_label = $DiseaseOverlay/DiseasePanel/Label
+@onready var ready_button = $readyButton
 
 @export var success_background:BackgroundData # 
 @export var next_scene: PackedScene # 
@@ -57,7 +58,7 @@ func _ready() -> void:
 	disease_overlay.hide()
 	
 	if background_music and music_player:
-		music_player.volume_db = -15.0
+		music_player.volume_db = -10.0
 		music_player.stream = background_music
 		music_player.play()
 	
@@ -146,8 +147,8 @@ func play_sfx(stream: AudioStream):
 func _on_ready_button_pressed():
 	play_sfx(sound_success)
 	var final_result = calculate_total() # 
-	var is_sucess = final_result >= 50
-	GameManager.next_turn(is_sucess)
+	var is_sucess = final_result * 2.5 >= 50
+	GameManager.current_score_progress = final_result * 2.5
 	show_result(final_result) # 
 
 # Señales de los botones
@@ -173,4 +174,8 @@ func apply_body(body_item: Body):
 	
 func _on_info_button_pressed():
 	disease_overlay.visible = !disease_overlay.visible
+	if disease_overlay.visible:
+		ready_button.modulate.a = 0.0
+	else:
+		ready_button.modulate.a = 1.0
 	play_sfx(sound_click)

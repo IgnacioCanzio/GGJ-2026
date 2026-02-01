@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bblbj8tohmbcq"]
+
+[ext_resource type="Script" uid="uid://l8l0prwkwld3" path="res://Scripts/EndScene.gd" id="1_8fo1c"]
+[ext_resource type="Texture2D" uid="uid://cwo5t3gyrteeu" path="res://Sprites/Pantalla_derrota.png" id="1_ojehl"]
+[ext_resource type="AudioStream" uid="uid://dr1y8nl2q85ac" path="res://Sounds/Crónica TV música.mp3" id="3_ek8ke"]
+
+[node name="GameOver" type="Control" unique_id=1109455258]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8fo1c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=668170174]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ojehl")
+
+[node name="Timer" type="Timer" parent="." unique_id=1754524975]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=329642754]
+stream = ExtResource("3_ek8ke")
+autoplay = true

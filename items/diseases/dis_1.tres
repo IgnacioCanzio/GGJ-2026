@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_odraa")
 name = "Gripe"
-description = "Produce mucho frío y sensibilidad a la humedad."
+description = "Extreme cold and sensitivity to humidity."
 metadata/_custom_type_script = "uid://dllq3p807k5g1"
