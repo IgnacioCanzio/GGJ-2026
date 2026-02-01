@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://b57vwds1fyxej"]
+
+[ext_resource type="Script" uid="uid://p4gbn76ybk5m" path="res://Scripts/character_selection.gd" id="1_k6wfl"]
+[ext_resource type="Texture2D" uid="uid://hnqa7t63e5st" path="res://Sprites/MenuSelection/GrupoNPC_Background1.png" id="1_ni86w"]
+[ext_resource type="PackedScene" uid="uid://dna4uxr7ar2pc" path="res://Scenes/play_scene.tscn" id="2_827pk"]
+[ext_resource type="Texture2D" uid="uid://cn6d0h25wm6y0" path="res://Sprites/MenuSelection/GrupoNPC_NPC_61.png" id="2_k6wfl"]
+[ext_resource type="Script" uid="uid://cviughlggkt16" path="res://Scripts/color_rect.gd" id="3_mqp46"]
+[ext_resource type="AudioStream" uid="uid://brutd0ll7i3j2" path="res://Sounds/seleccionar.mp3" id="3_yk26h"]
+[ext_resource type="Texture2D" uid="uid://cvkn24ei8ytl6" path="res://Sprites/MenuSelection/GrupoNPC_NPC_41.png" id="4_827pk"]
+[ext_resource type="AudioStream" uid="uid://kpccasbl7t55" path="res://Sounds/Main Menu-Intro.wav" id="4_yk26h"]
+[ext_resource type="Texture2D" uid="uid://c6h62hy51sbte" path="res://Sprites/MenuSelection/GrupoNPC_NPC_31.png" id="5_yk26h"]
+[ext_resource type="Texture2D" uid="uid://c7kxvshb4t871" path="res://Sprites/MenuSelection/GrupoNPC_NPC_21.png" id="6_n33bw"]
+[ext_resource type="Texture2D" uid="uid://cl4kxm1qrxe4w" path="res://Sprites/MenuSelection/GrupoNPC_NPC_51.png" id="7_uklli"]
+[ext_resource type="Texture2D" uid="uid://de34bj8hjlofa" path="res://Sprites/MenuSelection/GrupoNPC_NPC_11.png" id="8_x4u35"]
+[ext_resource type="Texture2D" uid="uid://cale4dn2sapqj" path="res://Sprites/MenuSelection/GrupoNPC_NPC_principal1.png" id="9_ycxfr"]
+
+[node name="MenuSeleccion" type="Control" unique_id=880960056]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k6wfl")
+gameplay_scene = ExtResource("2_827pk")
+sound_click = ExtResource("3_yk26h")
+music_track = ExtResource("4_yk26h")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1956283608]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 11.0
+offset_right = 1949.0
+offset_bottom = 1091.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ni86w")
+
+[node name="Control" type="Control" parent="." unique_id=133298747]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 11.0
+offset_right = 29.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=728280216]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture_normal = ExtResource("2_k6wfl")
+ignore_texture_size = true
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton" unique_id=313931315]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 280.00003
+offset_right = 377.0
+offset_bottom = 320.00003
+scale = Vector2(6.1403637, 6.2895207)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "1"
+
+[node name="TextureButton2" type="TextureButton" parent="Control" unique_id=1992655762]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture_normal = ExtResource("4_827pk")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton2" unique_id=632869881]
+layout_mode = 0
+offset_left = 107.000015
+offset_top = 310.00003
+offset_right = 147.00002
+offset_bottom = 350.00003
+scale = Vector2(3.8265429, 8.390989)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "5"
+
+[node name="TextureButton3" type="TextureButton" parent="Control" unique_id=1545382831]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture_normal = ExtResource("5_yk26h")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton3" unique_id=2124723955]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 292.00003
+offset_right = 702.0
+offset_bottom = 332.00003
+scale = Vector2(4.155685, 5.6846504)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "4"
+
+[node name="TextureButton4" type="TextureButton" parent="Control" unique_id=2020196061]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture_normal = ExtResource("6_n33bw")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton4" unique_id=1093092881]
+layout_mode = 0
+offset_left = 1373.0001
+offset_top = 303.0
+offset_right = 1413.0001
+offset_bottom = 343.0
+scale = Vector2(5.6114545, 5.6246924)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "3"
+
+[node name="TextureButton5" type="TextureButton" parent="Control" unique_id=1242163021]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture_normal = ExtResource("7_uklli")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton5" unique_id=1940087450]
+layout_mode = 0
+offset_left = 1118.0
+offset_top = 304.0
+offset_right = 1158.0
+offset_bottom = 344.0
+scale = Vector2(4.828123, 7.0819163)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "6"
+
+[node name="TextureButton6" type="TextureButton" parent="Control" unique_id=50297230]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture_normal = ExtResource("8_x4u35")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton6" unique_id=451262164]
+layout_mode = 0
+offset_left = 1680.0
+offset_top = 385.99997
+offset_right = 1720.0
+offset_bottom = 425.99997
+scale = Vector2(4.96, 5.920002)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "2"
+
+[node name="TextureButton7" type="TextureButton" parent="Control" unique_id=1143597316]
+z_index = 20
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture_normal = ExtResource("9_ycxfr")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureButton7" unique_id=616128305]
+layout_mode = 0
+offset_left = 909.0
+offset_top = 542.0
+offset_right = 935.2097
+offset_bottom = 615.9527
+scale = Vector2(4.96, 5.920002)
+script = ExtResource("3_mqp46")
+color_brillo = Color(1.0046293, 0.55229, 0.42972803, 1)
+body_name_id = "7"
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=2022781306]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1882825485]
+autoplay = true

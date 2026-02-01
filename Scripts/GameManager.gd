@@ -53,6 +53,8 @@ func get_current_disease() -> String:
 func get_current_description() -> String:
 	return disease_descriptions.get(get_current_disease(), "Sin descripción")
 
+# GameManager.gd
+
 func next_turn(success: bool) -> GameState:
 	if success:
 		current_disease_index += 1
@@ -62,10 +64,11 @@ func next_turn(success: bool) -> GameState:
 		if available_bodies.is_empty():
 			return GameState.GAME_OVER
 		return GameState.CONTINUE_NEXT
-	
 	else:
+		# Si fallaste y ya no quedan personajes (incluyendo el oculto)
 		if available_bodies.is_empty():
 			return GameState.GAME_OVER
+		
 		return GameState.CONTINUE_SAME
 
 

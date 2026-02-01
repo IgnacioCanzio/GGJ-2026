@@ -21,4 +21,4 @@ func _on_time_out() -> void:
 
 func _reiniciar_juego() -> void:
 	GameManager.reset_game() 
-	get_tree().change_scene_to_file("res://Scenes/CharacterSelection.tscn")
+	get_tree().change_scene_to_file("res://Scenes/menu_seleccion.tscn")

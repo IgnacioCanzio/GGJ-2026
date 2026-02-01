@@ -1,81 +1,78 @@
 extends Control
 
-@export var gameplay_scene: PackedScene # 
-@onready var grid: GridContainer = $MainLayout/SelectionGrid
-@onready var confirm_button: Button = $MainLayout/ConfirmButton
-@onready var music_player = $MusicPlayer
+@export var gameplay_scene: PackedScene
 @onready var sfx_player = $SfxPlayer
-
+@onready var music_player = $MusicPlayer
 @export var sound_click: AudioStreamMP3
-@export var background_music: AudioStreamWAV
-
-var temp_selection: Body = null # 
+@export var music_track: AudioStreamWAV
+@export var secret_body_id: String = "7"
 
 func _ready():
-	if background_music and music_player:
-		music_player.volume_db = -15.0
-		music_player.stream = background_music
+	if music_track and music_player:
+		music_player.volume_db = -10.0
+		music_player.stream = music_track
 		music_player.play()
-	
-	anchor_right = 1.0
-	anchor_bottom = 1.0
-	
-	if confirm_button:
-		confirm_button.disabled = true # 
-		confirm_button.text = "Selecciona un personaje"
-		if not confirm_button.pressed.is_connected(_on_confirm_pressed):
-			confirm_button.pressed.connect(_on_confirm_pressed) # 
-	
-	setup_selection_grid() # 
+	_actualizar_disponibilidad_botones()
 
-func setup_selection_grid():
-	for child in grid.get_children():
-		child.queue_free() # 
+func _actualizar_disponibilidad_botones():
+	# Contamos personajes normales restantes en el GameManager
+	var normales_restantes = 0
+	for b in GameManager.available_bodies:
+		if b.name != secret_body_id:
+			normales_restantes += 1
 	
-	# Ajustes del Grid para estética 
-	grid.columns = 5 
-	grid.add_theme_constant_override("h_separation", 40)
-	grid.add_theme_constant_override("v_separation", 40)
-	
-	for body in GameManager.available_bodies: # [cite: 8, 9]
-		var btn = TextureButton.new()
-		
-		btn.texture_normal = body.textureIcon # [cite: 7, 8]
-		btn.custom_minimum_size = Vector2(280, 280) # Aumentado para visibilidad 
-		btn.ignore_texture_size = true
-		btn.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED # 
-		btn.pivot_offset = btn.custom_minimum_size / 2 # Para que la escala crezca desde el centro
-		
-		btn.modulate = Color(0.5, 0.5, 0.5) # 
-		btn.pressed.connect(func(): _on_body_preselected(body, btn)) # 
-		
-		grid.add_child(btn)
+	for btn in $Control.get_children():
+		if btn is TextureButton:
+			var sensor = btn.get_node_or_null("ColorRect")
+			if sensor:
+				var body_id = sensor.body_name_id
+				
+				# LÓGICA PARA EL PERSONAJE SECRETO
+				if body_id == secret_body_id:
+					btn.show() # Siempre visible como pediste
+					
+					if normales_restantes == 0:
+						btn.disabled = false
+						btn.modulate = Color(1, 1, 1) # Color normal
+					else:
+						btn.disabled = true
+						btn.modulate = Color(0.3, 0.3, 0.3) # Se ve oscuro/bloqueado
+				
+				# LÓGICA PARA PERSONAJES NORMALES
+				else:
+					var disponible = false
+					for b in GameManager.available_bodies:
+						if b.name == body_id:
+							disponible = true
+							break
+					
+					if disponible:
+						btn.show()
+						btn.disabled = false
+					else:
+						btn.hide() # Los normales sí se ocultan al agotarse
 
-func _on_body_preselected(body: Body, selected_btn: TextureButton):
-	play_sfx()
-	temp_selection = body # 
-	confirm_button.disabled = false # 
-	confirm_button.text = "Confirmar selección de: " + body.name
+func _on_personaje_seleccionado_directo(body_id: String):
+	var selected_resource: Body = null
 	
-	for btn in grid.get_children():
-		btn.modulate = Color(0.4, 0.4, 0.4) # 
-		var t_reset = create_tween()
-		t_reset.tween_property(btn, "scale", Vector2(1.0, 1.0), 0.1) # 
+	# Buscar el recurso en la lista de disponibles
+	for b in GameManager.available_bodies:
+		if b.name == body_id:
+			selected_resource = b
+			break
 	
-	selected_btn.modulate = Color(1.2, 1.2, 1.2) # Brillo para resaltar 
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	tween.tween_property(selected_btn, "scale", Vector2(1.15, 1.15), 0.2) # 
-
-func _on_confirm_pressed():
-	if temp_selection:
+	if selected_resource:
 		play_sfx()
-		await get_tree().create_timer(0.1).timeout 
-		GameManager.select_and_remove_body(temp_selection)
-		get_tree().change_scene_to_packed(gameplay_scene)
+		# 1. Seteamos el cuerpo en el GameManager y lo quitamos de la lista
+		GameManager.select_and_remove_body(selected_resource)
+		
+		# 2. Cambio de escena inmediato
+		if gameplay_scene:
+			get_tree().change_scene_to_packed(gameplay_scene)
+		else:
+			print("Error: No asignaste la escena de juego en el Inspector")
 
 func play_sfx():
 	if sfx_player and sound_click:
 		sfx_player.stream = sound_click
-		sfx_player.pitch_scale = randf_range(0.9, 1.1) 
 		sfx_player.play()

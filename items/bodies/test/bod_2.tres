@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Body" format=3 uid="uid://bsxxo3ttsd8ro"]
 
 [ext_resource type="Script" uid="uid://mg5tt5ux4qbv" path="res://items/Body.gd" id="1_ag6ty"]
-[ext_resource type="Texture2D" uid="uid://ok4nnr3ncniw" path="res://Sprites/Personajes_pantalla_craft/Personajes_pantalla_mascara_2.png" id="2_gxqeq"]
 [ext_resource type="Texture2D" uid="uid://dvf85ir7l3xt" path="res://Scenes/MenuPlayers/human siluette.jpg" id="2_ls3j0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gxqeq"]
+load_path = "res://.godot/imported/Personajes_pantalla_mascara_2.png-ef953b44f57526c1603943f6fa58cf35.ctex"
 
 [resource]
 script = ExtResource("1_ag6ty")
 textureIcon = ExtResource("2_ls3j0")
-textureSelection = ExtResource("2_gxqeq")
+textureSelection = SubResource("CompressedTexture2D_gxqeq")
 name = "2"
 metadata/_custom_type_script = "uid://mg5tt5ux4qbv"

@@ -105,7 +105,7 @@ func _procesar_cambio_de_estado(exito: bool) -> void:
 		GameManager.GameState.GAME_OVER:
 			_cambiar_escena(escena_perder, 0.5)
 		GameManager.GameState.CONTINUE_NEXT, GameManager.GameState.CONTINUE_SAME:
-			get_tree().change_scene_to_file("res://Scenes/CharacterSelection.tscn")
+			get_tree().change_scene_to_file("res://Scenes/menu_seleccion.tscn")
 
 func _cambiar_escena(ruta: String, delay: float) -> void:
 	if ruta == "" or ruta == null: return
