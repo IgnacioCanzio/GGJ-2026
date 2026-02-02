@@ -9,4 +9,5 @@ script = ExtResource("1_q867k")
 textureIcon = ExtResource("2_04tw6")
 textureSelection = ExtResource("2_gr2ps")
 name = "5"
+gender = "Male"
 metadata/_custom_type_script = "uid://mg5tt5ux4qbv"

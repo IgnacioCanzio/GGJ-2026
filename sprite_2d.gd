@@ -3,7 +3,7 @@ extends AnimatedSprite2D
 @export_group("Configuracion de Movimiento")
 @export var valor_progreso: float = 40.0 
 @export var meta: float = 50.0
-@export var multiplicador_distancia: float = 40.0 
+@export var multiplicador_distancia: float = 35.0 
 @export var velocidad_constante: float = 300.0
 
 @export_group("Efectos de Muerte")
@@ -11,8 +11,9 @@ extends AnimatedSprite2D
 @export var tiempo_fundido_negro: float = 2.0
 
 @export_group("Sonidos")
-@export var sonido_caminata: AudioStream # Asigna aquí el sonido de pasos
-@export var male_death: AudioStream     # Asigna aquí el sonido de muerte
+@export var sonido_caminata: AudioStream
+@export var male_death: AudioStream
+@export var fem_death: AudioStream     
 
 @export_group("Escenas")
 @export_file("*.tscn") var escena_ganar: String
@@ -45,7 +46,7 @@ func _procesar_movimiento() -> void:
 	var destino_x: float
 	
 	if valor_progreso >= meta:
-		destino_x = pos_inicio_x + 2100
+		destino_x = pos_inicio_x + 2000.0
 	else:
 		destino_x = pos_inicio_x + (valor_progreso * multiplicador_distancia)
 	
@@ -66,14 +67,17 @@ func _al_finalizar_camino() -> void:
 	if resultado_exito:
 		_procesar_cambio_de_estado(true)
 	else:
-		_ejecutar_muerte()
+		_ejecutar_muerte(GameManager.selected_body.gender)
 
-func _ejecutar_muerte() -> void:
+func _ejecutar_muerte(gender:String) -> void:
 	# Reproducir sonido de muerte masculino
-	if male_death:
+	if male_death and fem_death:
 		var death_player = AudioStreamPlayer.new()
 		add_child(death_player)
-		death_player.stream = male_death
+		if gender == "Male":
+			death_player.stream = male_death
+		else:
+			death_player.stream = fem_death
 		death_player.play()
 		# Se limpia solo al terminar el sonido
 		death_player.finished.connect(death_player.queue_free)

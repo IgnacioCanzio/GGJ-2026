@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://c0m0t2f4c7rms" path="res://Sprites/Animations/muerte_00035.png" id="45_j8m70"]
 [ext_resource type="AudioStream" uid="uid://bwb5gvxgtb3vl" path="res://Sounds/Caminata.wav" id="47_61r0i"]
 [ext_resource type="AudioStream" uid="uid://bx618nwc0rpth" path="res://Sounds/muerte_h.wav" id="48_6vuwe"]
+[ext_resource type="AudioStream" uid="uid://di15x2dam01v8" path="res://Sounds/muerte_m.wav" id="49_6vuwe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qeyu8"]
 animations = [{
@@ -219,6 +220,7 @@ script = ExtResource("2_oinrg")
 valor_progreso = 50.0
 sonido_caminata = ExtResource("47_61r0i")
 male_death = ExtResource("48_6vuwe")
+fem_death = ExtResource("49_6vuwe")
 escena_ganar = "uid://0ileclvy4vlx"
 escena_perder = "uid://bblbj8tohmbcq"
 

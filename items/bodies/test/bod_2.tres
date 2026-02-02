@@ -11,4 +11,5 @@ script = ExtResource("1_ag6ty")
 textureIcon = ExtResource("2_ls3j0")
 textureSelection = SubResource("CompressedTexture2D_gxqeq")
 name = "2"
+gender = "Male"
 metadata/_custom_type_script = "uid://mg5tt5ux4qbv"

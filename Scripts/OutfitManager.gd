@@ -1,6 +1,6 @@
 extends Node
 
-@export var item_list: Array[Item] # 
+@export var item_list: Array[Item]
 
 # Referencias a los botones para cambiar sus iconos
 @onready var button_eyes = $CategorySelection/EyesTexture # 
@@ -20,6 +20,7 @@ extends Node
 @export var background_music: AudioStreamWAV
 @export var sound_click: AudioStreamMP3
 @export var sound_success: AudioStreamMP3 
+@export var random_sound_list: Array[AudioStreamWAV]
 
 @onready var texture_background = $Background # 
 @onready var disease_overlay = $DiseaseOverlay
@@ -147,26 +148,24 @@ func play_sfx(stream: AudioStream):
 func _on_ready_button_pressed():
 	play_sfx(sound_success)
 	var final_result = calculate_total() # 
-	var is_sucess = final_result * 2.5 >= 50
 	GameManager.current_score_progress = final_result * 2.5
 	show_result(final_result) # 
 
 # Señales de los botones
 func _on_eares_texture_pressed(extra_arg_0: String) -> void:
-	print("Señal presionada: ears")
-	play_sfx(sound_click)
-	rotate_item(extra_arg_0) # [cite: 2, 5]
+	play_sfx(random_sound_list[randi() % random_sound_list.size()])
+	rotate_item(extra_arg_0)
 
 func _on_eyes_texture_pressed(extra_arg_0: String) -> void:
-	play_sfx(sound_click)
+	play_sfx(random_sound_list[randi() % random_sound_list.size()])
 	rotate_item(extra_arg_0) # 
 
 func _on_nose_mouth_texture_pressed(extra_arg_0: String) -> void:
-	play_sfx(sound_click)
+	play_sfx(random_sound_list[randi() % random_sound_list.size()])
 	rotate_item(extra_arg_0) # 
 
 func _on_hat_texture_pressed(extra_arg_0: String) -> void:
-	play_sfx(sound_click)
+	play_sfx(random_sound_list[randi() % random_sound_list.size()])
 	rotate_item(extra_arg_0) # 
 
 func apply_body(body_item: Body):

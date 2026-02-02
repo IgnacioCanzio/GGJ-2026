@@ -27,9 +27,13 @@
 [ext_resource type="Resource" uid="uid://5e5haphx3rvc" path="res://items/eyes/eyes2_item.tres" id="20_ehfk6"]
 [ext_resource type="Resource" uid="uid://dlmvvsboggcci" path="res://items/eyes/eyes3_item.tres" id="21_pyjq2"]
 [ext_resource type="Resource" uid="uid://cg3u2wsph1xy8" path="res://items/eyes/eyes4_item.tres" id="22_vttyd"]
+[ext_resource type="AudioStream" uid="uid://g6ddbcmspfrd" path="res://Sounds/randomSounds/cinta con corte.wav" id="26_p6dq2"]
 [ext_resource type="PackedScene" uid="uid://cmu4nlpdyynux" path="res://Scenes/TestMaskScene.tscn" id="27_ge4dx"]
+[ext_resource type="AudioStream" uid="uid://ckfhsejfmtub3" path="res://Sounds/randomSounds/lija.wav" id="27_xkhs3"]
 [ext_resource type="Texture2D" uid="uid://cogcjgnjcq1ya" path="res://Sprites/Void/void_200x200.png" id="28_0jq4l"]
+[ext_resource type="AudioStream" uid="uid://bvq7nd818bueu" path="res://Sounds/randomSounds/martillo.wav" id="28_0t5vj"]
 [ext_resource type="Texture2D" uid="uid://bwnixaq5usimn" path="res://Sprites/Diario_sintomas_base2.png" id="29_ipi3v"]
+[ext_resource type="AudioStream" uid="uid://bo8ln4aqgfjff" path="res://Sounds/randomSounds/sierra corte.wav" id="29_slnyw"]
 [ext_resource type="Texture2D" uid="uid://cisgiumkmqtpy" path="res://Sprites/Botones_diario.png" id="29_wn8tk"]
 [ext_resource type="FontFile" uid="uid://ctub0ccuqk7om" path="res://Fonts/times.ttf" id="29_wuoun"]
 
@@ -50,6 +54,7 @@ item_list = Array[ExtResource("2_ivbpn")]([ExtResource("3_fbpj1"), ExtResource("
 background_music = ExtResource("6_45wvb")
 sound_click = ExtResource("6_io55t")
 sound_success = ExtResource("7_45wvb")
+random_sound_list = Array[AudioStreamWAV]([ExtResource("26_p6dq2"), ExtResource("27_xkhs3"), ExtResource("28_0t5vj"), ExtResource("29_slnyw")])
 success_background = ExtResource("2_1sdb3")
 next_scene = ExtResource("27_ge4dx")
 
