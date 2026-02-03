@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cviughlggkt16" path="res://Scripts/color_rect.gd" id="3_mqp46"]
 [ext_resource type="AudioStream" uid="uid://brutd0ll7i3j2" path="res://Sounds/seleccionar.mp3" id="3_yk26h"]
 [ext_resource type="Texture2D" uid="uid://cvkn24ei8ytl6" path="res://Sprites/MenuSelection/GrupoNPC_NPC_41.png" id="4_827pk"]
+[ext_resource type="Texture2D" uid="uid://cwvgajtmfdccy" path="res://Sprites/Carteles_1.png" id="4_uklli"]
 [ext_resource type="AudioStream" uid="uid://kpccasbl7t55" path="res://Sounds/Main Menu-Intro.wav" id="4_yk26h"]
 [ext_resource type="Texture2D" uid="uid://c6h62hy51sbte" path="res://Sprites/MenuSelection/GrupoNPC_NPC_31.png" id="5_yk26h"]
 [ext_resource type="Texture2D" uid="uid://c7kxvshb4t871" path="res://Sprites/MenuSelection/GrupoNPC_NPC_21.png" id="6_n33bw"]
@@ -14,11 +15,25 @@
 [ext_resource type="Texture2D" uid="uid://de34bj8hjlofa" path="res://Sprites/MenuSelection/GrupoNPC_NPC_11.png" id="8_x4u35"]
 [ext_resource type="Texture2D" uid="uid://cale4dn2sapqj" path="res://Sprites/MenuSelection/GrupoNPC_NPC_principal1.png" id="9_ycxfr"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n33bw"]
+load_path = "res://.godot/imported/Carteles_2.png-cf8460f2c1daf2440f133ba838506404.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4u35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycxfr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4b8b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5abxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2g4n"]
+
 [node name="MenuSeleccion" type="Control" unique_id=880960056]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_k6wfl")
 gameplay_scene = ExtResource("2_827pk")
+diapositivas = Array[Texture2D]([SubResource("CompressedTexture2D_n33bw"), ExtResource("4_uklli")])
 sound_click = ExtResource("3_yk26h")
 music_track = ExtResource("4_yk26h")
 
@@ -180,3 +195,20 @@ body_name_id = "7"
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1882825485]
 autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1815380462]
+layout_mode = 0
+offset_left = 28.0
+offset_right = 1937.0
+offset_bottom = 1087.0
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=2129743857]
+layout_mode = 0
+offset_top = 887.0
+offset_right = 1883.0
+offset_bottom = 1088.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x4u35")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycxfr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d4b8b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5abxy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m2g4n")

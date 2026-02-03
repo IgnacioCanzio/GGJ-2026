@@ -1,17 +1,59 @@
 extends Control
 
 @export var gameplay_scene: PackedScene
+@export_group("Diapositivas")
+@export var diapositivas: Array[Texture2D] = []  # Arrastra tus 2 imágenes aquí
 @onready var sfx_player = $SfxPlayer
 @onready var music_player = $MusicPlayer
+@onready var display_imagen = $TextureRect  # Asume que existe en la escena
+@onready var boton_siguiente = $TextureRect/Button  # Asume que existe en la escena
 @export var sound_click: AudioStreamMP3
 @export var music_track: AudioStreamWAV
 @export var secret_body_id: String = "7"
+
+var indice_actual: int = 0
 
 func _ready():
 	if music_track and music_player:
 		music_player.volume_db = -10.0
 		music_player.stream = music_track
 		music_player.play()
+	
+	# Inicializar diapositivas si existen
+	if diapositivas.size() > 0:
+		display_imagen.texture = diapositivas[0]
+		_actualizar_diapositiva(0)
+	else:
+		_mostrar_seleccion()
+	
+	boton_siguiente.pressed.connect(_on_boton_siguiente_pressed)
+	_actualizar_disponibilidad_botones()
+
+func _on_boton_siguiente_pressed() -> void:
+	indice_actual += 1
+	
+	if indice_actual < diapositivas.size():
+		display_imagen.texture = diapositivas[indice_actual]
+		_actualizar_diapositiva(indice_actual)
+	else:
+		_mostrar_seleccion()
+
+func _actualizar_diapositiva(indice: int) -> void:
+	# Las diapositivas están visibles, Control visible pero no clickeable
+	display_imagen.visible = true
+	boton_siguiente.visible = true
+	$Control.visible = true
+	$Control.mouse_filter = Control.MOUSE_FILTER_IGNORE  # No bloquea clicks
+	display_imagen.mouse_filter = Control.MOUSE_FILTER_STOP
+	display_imagen.z_index = 100  # Diapositivas encima de todo
+
+func _mostrar_seleccion() -> void:
+	# Ocultar diapositivas, mostrar selección de personajes (clickeable)
+	display_imagen.visible = false
+	boton_siguiente.visible = false
+	display_imagen.z_index = 0  # Restaurar z_index
+	$Control.visible = true
+	$Control.mouse_filter = Control.MOUSE_FILTER_STOP  # Permitir clicks
 	_actualizar_disponibilidad_botones()
 
 func _actualizar_disponibilidad_botones():

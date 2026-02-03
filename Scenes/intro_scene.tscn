@@ -2,7 +2,28 @@
 
 [ext_resource type="Script" uid="uid://cqtyhmge3f1mu" path="res://Scripts/intro_scene.gd" id="1_bbocs"]
 [ext_resource type="Texture2D" uid="uid://dabyfa6me7hi1" path="res://Sprites/Pantalla_incial.png" id="1_d30j0"]
-[ext_resource type="Texture2D" uid="uid://baua12ofv5v4n" path="res://Sprites/Diario_sintomas_refe2.png" id="3_lim1r"]
+[ext_resource type="FontFile" uid="uid://ctub0ccuqk7om" path="res://Fonts/times.ttf" id="4_m538q"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lim1r"]
+load_path = "res://.godot/imported/Pantalla_incial.png-ab17b1cb03505c277fba2a02bdbad884.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m538q"]
+load_path = "res://.godot/imported/Diario_sintomas_base2.png-e3dbb02ce480b34b3ee53b7df7dcb256.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lim1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m538q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqy4q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hq3du"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctf76"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aqy4q"]
+font = ExtResource("4_m538q")
+font_size = 42
+font_color = Color(0, 0, 0, 1)
 
 [node name="IntroScene" type="Control" unique_id=761648763]
 layout_mode = 3
@@ -12,7 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bbocs")
-diapositivas = Array[Texture2D]([ExtResource("1_d30j0"), ExtResource("3_lim1r")])
+diapositivas = Array[Texture2D]([SubResource("CompressedTexture2D_lim1r"), SubResource("CompressedTexture2D_m538q")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2090035920]
 layout_mode = 1
@@ -30,5 +51,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lim1r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m538q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aqy4q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hq3du")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ctf76")
+
+[node name="Label" type="Label" parent="." unique_id=692768831]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 619.0
+offset_right = 1033.0
+offset_bottom = 900.0
+label_settings = SubResource("LabelSettings_aqy4q")
+autowrap_mode = 2
 
 [connection signal="pressed" from="TextureRect/NextButton" to="." method="_on_next_button_pressed"]
